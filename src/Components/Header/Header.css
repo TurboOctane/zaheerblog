@@ -1,0 +1,128 @@
+.header {
+	display: flex;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #000;
+	color: white;
+	box-shadow: 0px 4px 18px 1px rgb(0 0 0 / 50%),
+		0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+.header__left > a {
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+}
+.header__icons > ul > a:hover{
+	color: red;
+	transition: all ease 0.5s;
+}
+.header__icons > ul > a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px;
+}
+.header__left > a > span {
+	color: red;
+}
+.header__left > a:hover {
+	text-decoration: underline;
+}
+.header__right {
+	display: flex;
+	align-items: center;
+}
+.header__icons{
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+}
+.header__avatar {
+	object-fit: contain;
+	height: 35px !important;
+	width: 35px !important;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-left: 10px;
+	margin-right: -20px;
+}
+.navbar__user__data {
+	display: flex;
+	align-items: center;
+}
+.user {
+	cursor: pointer;
+	border: 2px solid rgb(0, 255, 234);
+}
+.signedIn {
+	font-size: 15px;
+	padding-left: 10px;
+	margin-right: 5px;
+	cursor: pointer;
+	flex-direction: column;
+	align-items: center;
+}
+.auth__button {
+	color: #fff;
+	background-color: red;
+	padding: 8px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.menu_icon{
+	display: none;
+}
+
+@media screen and (max-width: 960px) {
+	.nav-menu {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		top: 55px;
+		left: -100%;
+		opacity: 1;
+		transition: all 0.5s ease;
+	}
+	.nav-menu.active {
+        background: #242222;
+		left: 0;
+		opacity: 1;
+		transition: all 0.5s ease;
+		z-index: 1;
+    }
+	.menu_icon {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(-20%, 35%);
+		font-size: 1.8rem;
+		cursor: pointer;
+		margin-right: 5px;
+	}
+	.auth__button{
+		margin-right: 35px;
+	}
+	.header__icons > ul > a {
+		text-align: center;
+		padding: 2rem;
+		width: 100%;
+		display: table;
+		font-size: 25px;
+	}
+	.signedIn {
+		display: none;
+	}
+	.user{
+		margin-right: 10px;
+	}
+}
+
